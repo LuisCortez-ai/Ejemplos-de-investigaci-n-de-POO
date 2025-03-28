@@ -1,6 +1,7 @@
 #Ejemplo 1
 #Clase padre
 class CuentadeBitcoin:
+#Definimos atributos y métodos de la clase padre
     def __init__(self, saldo=0.0):
          self.saldo = saldo
 
@@ -11,6 +12,7 @@ class CuentadeBitcoin:
      else: 
         print("\tNo hay suficientes fondos para retirar")
 # Subclase que herada de CuentaDeBitcoin
+#Definimos atributos y métodos de la clase heredada
 class CuentaPremium(CuentadeBitcoin):
     def __init__(self, saldo=0.0, cashback=0.05):
         super().__init__(saldo)
@@ -23,7 +25,8 @@ class CuentaPremium(CuentadeBitcoin):
             print(f"\tRetiro exitosos con cashback. Nuevo saldo:"+ str(round(self.saldo,2))+ f" (Cashback: {cashback_ganado})")
         else:
             print("\tNo hay suficientes fondos para retirar")
-            
+
+#Creamos instancias de los objetos
 Cuenta_normal=CuentadeBitcoin(0)
 Cuenta_gold=CuentaPremium(170.3)
 
