@@ -15,6 +15,7 @@ class CuentadeBitcoin:
 #Definimos atributos y métodos de la clase heredada
 class CuentaPremium(CuentadeBitcoin):
     def __init__(self, saldo=0.0, cashback=0.05):
+        #Llamamos a la clase padre
         super().__init__(saldo)
         self.cashback = cashback
     def retirarCP(self, cantidad):
